@@ -7,8 +7,10 @@ const About = () => {
         <div className="content second-content p-12 overflow-y-scroll text-left">
           <div className=" grid grid-cols-2 gap-4">
             <div className="">
-              <div className="left-content text-justify pr-8">
-                <h2>About Us</h2>
+              <div className="left-content text-justify items-center pt-8 ">
+                <h2 className="text-4xl uppercase font-bold border-b-2 inline-block pb-3 mb-3 mt-0">
+                  About
+                </h2>
                 <p>
                   Please tell your friends about templatemo website. A variety
                   of free CSS templates are available for immediate downloads.
