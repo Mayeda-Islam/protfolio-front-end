@@ -1,4 +1,7 @@
 import React from "react";
+import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
+import { BsFillPhoneFill, BsPhone } from "react-icons/bs";
 import myImg from "../../images/my-img/mayeda.png";
 const About = () => {
   return (
@@ -11,31 +14,97 @@ const About = () => {
                 <h2 className="text-4xl uppercase font-bold border-b-2 inline-block pb-3 mb-3 mt-0">
                   About
                 </h2>
-                <p>
-                  Please tell your friends about templatemo website. A variety
-                  of free CSS templates are available for immediate downloads.
+                <p className="">
+                  Hello! My name is{" "}
+                  <span className="font-semibold">Mayeda Islam</span>. I am a
+                  front-end web developer. I have a diverse set of skill,
+                  ranging from HTML, CSS, Javascript, React and all the way to
+                  Express & MongoDB.
                 </p>
+                <div>
+                  <h2 className="text-sm uppercase font-bold border-b-2 inline-block pb-1 mt-0">
+                    Qualification
+                  </h2>
+                  <p>
+                    <em>B. Sc In Computer Science And Engineering</em>
+                  </p>
+                </div>
+                <h2 className="text-sm uppercase font-bold border-b-2 inline-block pb-1 mt-0">
+                  Institution
+                </h2>
                 <p>
-                  Phasellus vitae faucibus orci. Etiam eleifend orci sed
-                  faucibus semper. Cras varius dolor et augue fringilla, eu
-                  commodo sapien iaculis. Donec eget dictum tellus.
-                  <a href="#">Curabitur</a> a interdum diam. Nulla vestibulum
-                  porttitor porta.
+                  <em>Central University of Science and Technology</em>
                 </p>
-                <p>
-                  Nulla vitae interdum libero, vel posuere ipsum. Phasellus
-                  interdum est et dapibus tempus. Vestibulum malesuada lorem
-                  condimentum mauris ornare dapibus. Curabitur tempor ligula et
-                  <a href="#">placerat</a> molestie.
-                </p>
-                <p>
-                  Aliquam efficitur eu purus in interdum.
-                  <a href="#">Etiam tincidunt</a> magna ex, sit amet lobortis
-                  felis bibendum id. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit.
-                </p>
-                <div className="main-btn">
-                  <a href="#3">Read More</a>
+                <div>
+                  <h2
+                    className="text-sm
+                    uppercase
+                    font-bold
+                    border-b-2
+                    inline-block
+                    pb-1
+                    mt-0"
+                  >
+                    Find me on
+                  </h2>
+                  <div>
+                    <div className="flex w-1/2 pl-0 p-4">
+                      <div className="px-3 py-3 bg-green-100 text-green-800 rounded-full bg-transparent text-xl mr-4">
+                        {" "}
+                        <a
+                          href="https://github.com/Mayeda-Islam"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {" "}
+                          <FaGithub></FaGithub>
+                        </a>
+                      </div>
+                      <div className="px-3 py-3 bg-green-100 text-green-800 rounded-full bg-transparent text-xl mr-4">
+                        {" "}
+                        <a href="https://www.linkedin.com/in/mayeda-islam/">
+                          {" "}
+                          <FaLinkedin></FaLinkedin>
+                        </a>
+                      </div>
+                      <div className="px-3 py-3 bg-green-100 text-green-800 rounded-full bg-transparent text-xl mr-4">
+                        {" "}
+                        <a
+                          href="https://www.facebook.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {" "}
+                          <FaFacebookF></FaFacebookF>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h2
+                    className="text-sm
+                    uppercase
+                    font-bold
+                    border-b-2
+                    inline-block
+                    pb-1
+                    mt-0"
+                  >
+                    Contact me here
+                  </h2>
+                </div>
+                <div className="flex items-center justify-evenly ml-3 gap-x-4 w-1/2">
+                  <div className="text-xl">
+                    <AiOutlineMail></AiOutlineMail>
+                  </div>
+                  <em className="text-md">mayedakonika@gmail.com</em>
+                </div>
+                <div className="flex items-center justify-evenly gap-x-4 ml-3 w-1/3">
+                  <div className="text-xl mt-2 ">
+                    <BsPhone></BsPhone>
+                  </div>
+                  <em className="text-md ">+8801782955580</em>
                 </div>
               </div>
             </div>

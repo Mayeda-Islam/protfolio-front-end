@@ -20,28 +20,31 @@ const Projects = () => {
                   <p className="text-sm tracking-wide leading-6 font-light ">
                     {project.description}
                   </p>
-                  <h2 className="text-xl uppercase font-bold border-b-2 inline-block pb-3  mt-0">
+                  <p className="uppercase font-bold text-sm my-2">
                     Technologies used
-                  </h2>
-                  <p className="mb-2 text-sm tracking-wide leading-6 font-light ">
-                    {project.technologies.map((technology) => technology)}
                   </p>
-                  <div className="">
-                    <h2 className="text-xl uppercase font-bold border-b-2 inline-block pb-3  mt-0">
-                      Project links
-                    </h2>
-                    <br />
-                    {project.links.map((link) => (
-                      <a
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className=" mr-4"
-                      >
-                        {" "}
-                        <em className="text-extrabold"> {link.title}</em>
-                      </a>
+                  <p className="">
+                    {project.technologies.map((technology) => (
+                      <em className="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-lg dark:bg-green-900 dark:text-green-300">
+                        {technology}
+                      </em>
                     ))}
+                  </p>
+                  <div className=" my-4">
+                    <h2 className="uppercase text-sm  font-bold  inline-block  mt-0">
+                      Project links :{" "}
+                      {project.links.map((link) => (
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className=" mr-4"
+                        >
+                          {" "}
+                          <em className="text-extrabold"> {link.title}</em>
+                        </a>
+                      ))}
+                    </h2>
                   </div>
                 </div>
               </div>
