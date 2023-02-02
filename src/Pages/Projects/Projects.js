@@ -11,8 +11,12 @@ const Projects = () => {
       <div className="slide w-screen h-screen " id="1">
         <div className="content  overflow-y-scroll p-8">
           {projects.map((project, i) => (
-            <div className="flex justify-between mb-12 w-full">
-              <div className={`${i % 2 !== 0 ? `order-last` : ""} w-1/2`}>
+            <div className="flex flex-col md:flex-row justify-between mb-12 w-full">
+              <div
+                className={`${
+                  i % 2 !== 0 ? `order-last border-b-2` : ""
+                } md:w-1/2`}
+              >
                 <div className="left-content text-justify pr-8 ">
                   <h2 className="text-xl uppercase font-bold border-b-2 inline-block pb-3  mt-0">
                     {project.title}
@@ -48,7 +52,7 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-1/2 pr-4">
+              <div className="md:w-1/2 pr-4">
                 <Swiper
                   spaceBetween={30}
                   centeredSlides={true}

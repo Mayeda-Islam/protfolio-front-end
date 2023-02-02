@@ -5,19 +5,19 @@ const Home = () => {
   return (
     <div className="slides" style={{ height: "100vh" }}>
       <div className="slide" id="1">
-        <div className="content p-28 text-left ">
-          <div className="grid grid-cols-3">
+        <div className="content p-10  md:p-28 text-left ">
+          <div className="grid grid-cols-1 md:grid-cols-3">
             <div className="">
               <div className="author-image">
                 <img
                   src={homepic}
-                  className="mt-4 rounded-3xl mr-8 w-40"
+                  className="mt-4 rounded-3xl mr-8 w-full md:w-40"
                   alt=""
                 />
               </div>
             </div>
-            <div className="col-span-2">
-              <h2 className="text-4xl uppercase font-bold border-b-2 inline-block pb-3 mb-3 mt-0">
+            <div className="col-span-2 text-center md:text-left mt-8 md:mt-0">
+              <h2 className="text-4xl  uppercase font-bold border-b-2 inline-block pb-3 mb-3 mt-0">
                 Mayeda islam
               </h2>
               <p className="text-sm tracking-widest mb-5 leading-6 uppercase font-light">
@@ -30,14 +30,20 @@ const Home = () => {
                 work closely with design teams and back-end developers to ensure
                 a seamless user experience.
               </p>
-              <div className="main-btn flex">
-                <button className="inline-block mr-5 border-2 py-2 px-4 text-sm tracking-wider text-white hover:transition-all hover:bg-white hover:text-black uppercase ">
+              <div className="main-btn  md:flex">
+                <button className="inline-block mb-4  mr-5 border-2 py-2 px-4 text-sm tracking-wider text-white hover:transition-all hover:bg-white hover:text-black uppercase ">
                   Read more
                 </button>
 
-                <button className="inline-block mr-5 border-2 py-2 px-4 text-sm bg-white text-black uppercase tracking-wider">
+                <a
+                  className="inline-block mb-4 mr-5 border-2 py-2 px-4 text-sm bg-white text-black uppercase tracking-wider"
+                  href="https://www.linkedin.com/in/mayeda-islam/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {" "}
                   Visit Linkedin
-                </button>
+                </a>
               </div>
             </div>
           </div>

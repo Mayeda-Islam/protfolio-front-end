@@ -7,11 +7,11 @@ const About = () => {
   return (
     <div>
       <div className="slide w-screen h-screen">
-        <div className="content second-content p-12 overflow-y-scroll text-left">
-          <div className=" grid grid-cols-2 gap-4">
+        <div className="content second-content md:p-12 p-8 overflow-y-scroll text-left">
+          <div className=" grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="">
-              <div className="left-content text-justify items-center pt-8 ">
-                <h2 className="text-4xl uppercase font-bold border-b-2 inline-block pb-3 mb-3 mt-0">
+              <div className="left-content  items-center  pt-8 ">
+                <h2 className="text-4xl text-justify uppercase font-bold border-b-2 inline-block pb-3 mb-3 mt-0">
                   About
                 </h2>
                 <p className="">
@@ -21,7 +21,7 @@ const About = () => {
                   ranging from HTML, CSS, Javascript, React and all the way to
                   Express & MongoDB.
                 </p>
-                <div>
+                <div className="text-left">
                   <h2 className="text-sm uppercase font-bold border-b-2 inline-block pb-1 mt-0">
                     Qualification
                   </h2>
@@ -29,87 +29,95 @@ const About = () => {
                     <em>B. Sc In Computer Science And Engineering</em>
                   </p>
                 </div>
-                <h2 className="text-sm uppercase font-bold border-b-2 inline-block pb-1 mt-0">
-                  Institution
-                </h2>
-                <p>
-                  <em>Central University of Science and Technology</em>
-                </p>
+                <div className="text-left">
+                  <h2 className="text-sm uppercase font-bold border-b-2 inline-block pb-1 mt-0">
+                    Institution
+                  </h2>
+                  <p>
+                    <em>Central University of Science and Technology</em>
+                  </p>
+                </div>
                 <div>
-                  <h2
-                    className="text-sm
+                  <div>
+                    <h2
+                      className="text-sm
                     uppercase
                     font-bold
                     border-b-2
                     inline-block
                     pb-1
                     mt-0"
-                  >
-                    Find me on
-                  </h2>
-                  <div>
-                    <div className="flex w-1/2 pl-0 p-4">
-                      <div className="px-3 py-3 bg-green-100 text-green-800 rounded-full bg-transparent text-xl mr-4">
-                        {" "}
-                        <a
-                          href="https://github.com/Mayeda-Islam"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+                    >
+                      Find me on
+                    </h2>
+                    <div className="">
+                      <div className="flex w-1/2 pl-0 p-4">
+                        <div className="pr-3 md:px-3 py-3 text-white md:bg-green-100 md:text-green-800 rounded-full bg-transparent text-xl md:mr-4">
                           {" "}
-                          <FaGithub></FaGithub>
-                        </a>
-                      </div>
-                      <div className="px-3 py-3 bg-green-100 text-green-800 rounded-full bg-transparent text-xl mr-4">
-                        {" "}
-                        <a href="https://www.linkedin.com/in/mayeda-islam/">
+                          <a
+                            href="https://github.com/Mayeda-Islam"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {" "}
+                            <FaGithub></FaGithub>
+                          </a>
+                        </div>
+                        <div className="px-3 py-3  text-white md:bg-green-100 md:text-green-800  rounded-full bg-transparent text-xl md:mr-4">
                           {" "}
-                          <FaLinkedin></FaLinkedin>
-                        </a>
-                      </div>
-                      <div className="px-3 py-3 bg-green-100 text-green-800 rounded-full bg-transparent text-xl mr-4">
-                        {" "}
-                        <a
-                          href="https://www.facebook.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+                          <a href="https://www.linkedin.com/in/mayeda-islam/">
+                            {" "}
+                            <FaLinkedin></FaLinkedin>
+                          </a>
+                        </div>
+                        <div className="px-3 py-3 text-white md:bg-green-100 md:text-green-800 rounded-full bg-transparent text-xl md:mr-4">
                           {" "}
-                          <FaFacebookF></FaFacebookF>
-                        </a>
+                          <a
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {" "}
+                            <FaFacebookF></FaFacebookF>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div>
-                  <h2
-                    className="text-sm
+                <div className="text-left">
+                  <div>
+                    <h2
+                      className="text-sm
                     uppercase
                     font-bold
                     border-b-2
                     inline-block
                     pb-1
                     mt-0"
-                  >
-                    Contact me here
-                  </h2>
-                </div>
-                <div className="flex items-center justify-evenly ml-3 gap-x-4 w-1/2">
-                  <div className="text-xl">
-                    <AiOutlineMail></AiOutlineMail>
+                    >
+                      Contact me here
+                    </h2>
                   </div>
-                  <em className="text-md">mayedakonika@gmail.com</em>
-                </div>
-                <div className="flex items-center justify-evenly gap-x-4 ml-3 w-1/3">
-                  <div className="text-xl mt-2 ">
-                    <BsPhone></BsPhone>
+                  <div className="">
+                    <div className="flex items-center justify-evenly ml-4 md:ml-3 gap-x-4 md:w-1/2 ">
+                      <div className="text-xl">
+                        <AiOutlineMail></AiOutlineMail>
+                      </div>
+                      <em className="text-md">mayedakonika@gmail.com</em>
+                    </div>
+                    <div className="flex items-center justify-evenly gap-x-4 ml-11 md:ml-3 w-1/3">
+                      <div className="text-xl mt-2 ">
+                        <BsPhone></BsPhone>
+                      </div>
+                      <em className="text-md ">+8801782955580</em>
+                    </div>
                   </div>
-                  <em className="text-md ">+8801782955580</em>
                 </div>
               </div>
             </div>
             <div className="">
-              <div className="right-image ">
+              <div className="right-image ml-[-20px] md:ml-0 ">
                 <img src={myImg} className="w-full " alt="" />
               </div>
             </div>
