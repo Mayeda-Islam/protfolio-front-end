@@ -16,22 +16,22 @@ const Navbar = () => {
         "
         // aria-label="Sidebar"
       >
-        <div class="h-full px-3 py-4  nav overflow-y-auto bg-gray-50 dark:bg-gray-800">
-          <ul class="space-y-2 flex flex-col items-end mr-9 ">
-            <li>
+        <div class="h-full  px-3 py-4  nav overflow-y-auto bg-gray-50 dark:bg-gray-800">
+          <ul class="space-y-2 flex flex-col mr-4 items-end  md:items-center md:justify-center mt-20  ">
+            <li className="pb-16 p-4 md:p-4 ">
               <NavLink
                 to={"/"}
                 className={({ isActive }) =>
                   `${isActive ? activeLinkClasses : ""} ${linkClasses}`
                 }
               >
-                <div className="text-4xl md:text-lg">
+                <div className="text-4xl md:text-lg ">
                   <FaHome></FaHome>
                 </div>
                 <em className="hidden md:block">Home</em>
               </NavLink>
             </li>
-            <li>
+            <li className="pb-16 p-4 md:p-4">
               <NavLink
                 to={"/about"}
                 className={({ isActive }) =>
@@ -44,7 +44,7 @@ const Navbar = () => {
                 <em className="hidden md:block">About</em>
               </NavLink>
             </li>
-            <li>
+            <li className="pb-16 p-4 md:p-4">
               <NavLink
                 to={"/projects"}
                 className={({ isActive }) =>
@@ -57,7 +57,7 @@ const Navbar = () => {
                 <em className="hidden md:block">Projects</em>
               </NavLink>
             </li>
-            <li>
+            <li className="pb-16 p-4 md:p-4">
               <NavLink
                 to={"/contact"}
                 className={({ isActive }) =>

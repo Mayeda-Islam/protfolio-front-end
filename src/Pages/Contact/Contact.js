@@ -5,6 +5,8 @@ const Contact = () => {
   return (
     <div
       data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in"
       style={{ backgroundImage: `url(${contactImage})`, objectFit: "cover" }}
     >
       <div className="slide  w-screen h-screen " id="5">

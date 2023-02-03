@@ -12,6 +12,8 @@ const About = () => {
         objectFit: "cover",
       }}
       data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in"
     >
       <div className="slide w-screen h-screen">
         <div className="content second-content md:p-12 p-8 overflow-y-scroll text-left">
@@ -124,7 +126,7 @@ const About = () => {
               </div>
             </div>
             <div className="">
-              <div className="right-image ml-[-20px] md:ml-0 ">
+              <div className="hidden md:block right-image ml-[-20px] md:ml-0 ">
                 <img src={myImg} className="w-full " alt="" />
               </div>
             </div>

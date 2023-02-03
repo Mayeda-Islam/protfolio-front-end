@@ -10,6 +10,8 @@ const Projects = () => {
   return (
     <div
       data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in"
       style={{
         backgroundImage: `url(${projectImage})`,
         objectFit: "cover",

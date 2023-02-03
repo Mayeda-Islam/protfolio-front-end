@@ -6,6 +6,8 @@ const Home = () => {
   return (
     <div
       data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in"
       className="slides"
       style={{
         height: "100vh",
