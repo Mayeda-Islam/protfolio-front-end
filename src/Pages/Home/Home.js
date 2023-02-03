@@ -1,9 +1,18 @@
 import React from "react";
 import "./Home.css";
 import homepic from "../../images/my-img/homepic.jpg";
+import homeImage from "../../images/background/cover8.png";
 const Home = () => {
   return (
-    <div className="slides" style={{ height: "100vh" }}>
+    <div
+      data-aos="fade-right"
+      className="slides"
+      style={{
+        height: "100vh",
+        backgroundImage: `url(${homeImage})`,
+        objectFit: "cover",
+      }}
+    >
       <div className="slide" id="1">
         <div className="content p-10  md:p-28 text-left ">
           <div className="grid grid-cols-1 md:grid-cols-3">

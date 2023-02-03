@@ -2,12 +2,19 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import projectImage from "../../images/background/cover1.png";
 import "./Projects.css";
 const Projects = () => {
   const projects = useLoaderData();
 
   return (
-    <div>
+    <div
+      data-aos="fade-right"
+      style={{
+        backgroundImage: `url(${projectImage})`,
+        objectFit: "cover",
+      }}
+    >
       <div className="slide w-screen h-screen " id="1">
         <div className="content  overflow-y-scroll p-8">
           {projects.map((project, i) => (

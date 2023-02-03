@@ -1,8 +1,12 @@
 import React from "react";
 import "./Contact.css";
+import contactImage from "../../images/background/cover7.jpg";
 const Contact = () => {
   return (
-    <div>
+    <div
+      data-aos="fade-right"
+      style={{ backgroundImage: `url(${contactImage})`, objectFit: "cover" }}
+    >
       <div className="slide  w-screen h-screen " id="5">
         <div className="content overflow-y-scroll  bg-black  fifth-content">
           <div className="container-fluid ">

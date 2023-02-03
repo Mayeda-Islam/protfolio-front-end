@@ -2,10 +2,17 @@ import React from "react";
 import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPhoneFill, BsPhone } from "react-icons/bs";
+import aboutImage from "../../images/background/cover6.jpg";
 import myImg from "../../images/my-img/mayeda.png";
 const About = () => {
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage: `url(${aboutImage})`,
+        objectFit: "cover",
+      }}
+      data-aos="fade-right"
+    >
       <div className="slide w-screen h-screen">
         <div className="content second-content md:p-12 p-8 overflow-y-scroll text-left">
           <div className=" grid grid-cols-1 md:grid-cols-2 gap-4">
