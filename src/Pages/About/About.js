@@ -118,16 +118,16 @@ const About = () => {
                   </div>
                   <div>
                     <div className="w-full mx-auto ">
-                      <div className="md:flex   md:justify-evenly     ">
-                        <div className="text-xl hidden md:block">
+                      <div className="md:flex      ">
+                        <div className="text-xl mr-4 hidden md:block">
                           <AiOutlineMail></AiOutlineMail>
                         </div>
                         <em className="text-md items-start">
                           mayedakonika@gmail.com
                         </em>
                       </div>
-                      <div className=" md:flex  md:justify-evenly  ">
-                        <div className="text-xl  hidden md:block">
+                      <div className=" md:flex   ">
+                        <div className="text-xl mr-4  hidden md:block">
                           <BsPhone></BsPhone>
                         </div>
                         <em className="text-md items-start">+8801782955580</em>

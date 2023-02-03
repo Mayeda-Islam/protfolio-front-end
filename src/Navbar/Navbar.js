@@ -5,8 +5,8 @@ import "./Navbar.css";
 const Navbar = () => {
   //     transition: "color 2s, background 1s",
   const linkClasses =
-    "flex items-center justify-center p-2 gap-3 text-base font-normal rounded-l hover:text-black hover:bg-white";
-  const activeLinkClasses = "bg-white text-black";
+    "flex items-center  justify-center p-2 gap-3 text-base font-normal rounded-l hover:text-black hover:bg-white";
+  const activeLinkClasses = "bg-white text-black ";
   return (
     <div>
       <aside

@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import homepic from "../../images/my-img/homepic.jpg";
 import homeImage from "../../images/background/cover8.png";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div
@@ -22,7 +23,7 @@ const Home = () => {
               <div className="author-image">
                 <img
                   src={homepic}
-                  className="mt-4 rounded-3xl mr-8 w-full md:w-40"
+                  className="mt-4 rounded-3xl  w-full md:w-40 mx-auto"
                   alt=""
                 />
               </div>
@@ -43,7 +44,7 @@ const Home = () => {
               </p>
               <div className="main-btn  md:flex">
                 <button className="inline-block mb-4  mr-5 border-2 py-2 px-4 text-sm tracking-wider text-white hover:transition-all hover:bg-white hover:text-black uppercase ">
-                  Read more
+                  <Link to={"/about"}>Read more</Link>
                 </button>
 
                 <a
