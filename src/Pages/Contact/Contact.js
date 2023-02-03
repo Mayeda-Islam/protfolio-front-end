@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Contact.css";
 import contactImage from "../../images/background/cover7.jpg";
+import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_qc8bgxp",
+        "template_8csnen5",
+        form.current,
+        "0VgFfJkeFLFxThSn3"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("successful");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div
       data-aos="fade-right"
@@ -25,13 +54,21 @@ const Contact = () => {
               </div>
             </div> */}
             <div className="col-md-6 ">
-              <form id="contact" className="p-12" action="" method="post">
+              <form
+                ref={form}
+                onSubmit={sendEmail}
+                id="contact"
+                className="p-12"
+                action=""
+                method="post"
+              >
                 <div className="row">
                   <div>
                     <fieldset>
                       <input
+                        {...register("user_name")}
                         style={{ backgroundColor: "rgba(250, 250, 250, 0.15)" }}
-                        name="name"
+                        name="user_name"
                         type="text"
                         className="pl-4 font-medium w-full h-10 mb-6 text-white text-md border-none rounded-none text-md"
                         id="name"
@@ -43,7 +80,8 @@ const Contact = () => {
                   <div>
                     <fieldset>
                       <input
-                        name="email"
+                        {...register("user_email")}
+                        name="user_email"
                         type="email"
                         style={{ backgroundColor: "rgba(250, 250, 250, 0.15)" }}
                         className="pl-4 font-medium w-full h-10 mb-6 text-white text-md border-none rounded-none text-md"
@@ -56,6 +94,7 @@ const Contact = () => {
                   <div className="col-md-12">
                     <fieldset>
                       <input
+                        {...register("subject")}
                         name="subject"
                         type="text"
                         style={{ backgroundColor: "rgba(250, 250, 250, 0.15)" }}
@@ -69,6 +108,7 @@ const Contact = () => {
                   <div className="col-md-12">
                     <fieldset>
                       <textarea
+                        {...register("message")}
                         name="message"
                         style={{ backgroundColor: "rgba(250, 250, 250, 0.15)" }}
                         rows="6"
