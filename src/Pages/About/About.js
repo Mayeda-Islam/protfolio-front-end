@@ -16,8 +16,8 @@ const About = () => {
       data-aos-easing="ease-in"
     >
       <div className="slide w-screen h-screen">
-        <div className="content second-content md:p-12 p-8 overflow-y-scroll text-left">
-          <div className=" grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="content second-content p-12 pr-4  overflow-y-scroll text-left">
+          <div className=" grid grid-cols-1  md:grid-cols-2 gap-4">
             <div className="">
               <div className="left-content  items-center  pt-8 ">
                 <h2 className="text-4xl text-justify uppercase font-bold border-b-2 inline-block pb-3 mb-3 mt-0">
@@ -25,17 +25,25 @@ const About = () => {
                 </h2>
                 <p className="">
                   Hello! My name is{" "}
-                  <span className="font-semibold">Mayeda Islam</span>. I am a
-                  front-end web developer. I have a diverse set of skill,
-                  ranging from HTML, CSS, Javascript, React and all the way to
-                  Express & MongoDB.
+                  <span className="font-semibold">Mayeda Islam</span>.{" "}
+                  <br className="md:hidden" /> I am a front-end{" "}
+                  <br className="md:hidden" /> web developer.
+                  <br className="md:hidden" /> I have a diverse{" "}
+                  <br className="md:hidden" />
+                  set of skill, ranging <br className="md:hidden" />
+                  from HTML, CSS, Javascript, React
+                  <br className="md:hidden" /> and all the way to{" "}
+                  <br className="md:hidden" /> Express & MongoDB.
                 </p>
                 <div className="text-left">
                   <h2 className="text-sm uppercase font-bold border-b-2 inline-block pb-1 mt-0">
                     Qualification
                   </h2>
                   <p>
-                    <em>B. Sc In Computer Science And Engineering</em>
+                    <em>
+                      B. Sc In Computer <br className="md:hidden" /> Science And
+                      Engineering
+                    </em>
                   </p>
                 </div>
                 <div className="text-left">
@@ -94,7 +102,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                <div className="text-left">
+                <div className="text-left ">
                   <div>
                     <h2
                       className="text-sm
@@ -108,18 +116,22 @@ const About = () => {
                       Contact me here
                     </h2>
                   </div>
-                  <div className="">
-                    <div className="flex items-center justify-evenly ml-4 md:ml-3 gap-x-4 md:w-1/2 ">
-                      <div className="text-xl">
-                        <AiOutlineMail></AiOutlineMail>
+                  <div>
+                    <div className="w-full mx-auto ">
+                      <div className="md:flex   md:justify-evenly     ">
+                        <div className="text-xl hidden md:block">
+                          <AiOutlineMail></AiOutlineMail>
+                        </div>
+                        <em className="text-md items-start">
+                          mayedakonika@gmail.com
+                        </em>
                       </div>
-                      <em className="text-md">mayedakonika@gmail.com</em>
-                    </div>
-                    <div className="flex items-center justify-evenly gap-x-4 ml-11 md:ml-3 w-1/3">
-                      <div className="text-xl mt-2 ">
-                        <BsPhone></BsPhone>
+                      <div className=" md:flex  md:justify-evenly  ">
+                        <div className="text-xl  hidden md:block">
+                          <BsPhone></BsPhone>
+                        </div>
+                        <em className="text-md items-start">+8801782955580</em>
                       </div>
-                      <em className="text-md ">+8801782955580</em>
                     </div>
                   </div>
                 </div>

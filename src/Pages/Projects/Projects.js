@@ -18,15 +18,13 @@ const Projects = () => {
       }}
     >
       <div className="slide w-screen h-screen " id="1">
-        <div className="content  overflow-y-scroll p-8">
+        <div className="content p-12 pr-4 overflow-y-scroll ">
           {projects.map((project, i) => (
-            <div className="flex flex-col md:flex-row justify-between mb-12 w-full">
+            <div className="flex flex-col-reverse  md:flex-row justify-between mb-12 w-full">
               <div
-                className={`${
-                  i % 2 !== 0 ? `order-last border-b-2` : ""
-                } md:w-1/2`}
+                className={`${i % 2 !== 0 ? `md:order-last ` : ""} md:w-1/2`}
               >
-                <div className="left-content text-justify pr-8 ">
+                <div className="left-content text-start pr-8 ">
                   <h2 className="text-xl uppercase font-bold border-b-2 inline-block pb-3  mt-0">
                     {project.title}
                   </h2>
@@ -61,7 +59,7 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              <div className="md:w-1/2 pr-4">
+              <div className="w-full md:w-1/2 pr-4">
                 <Swiper
                   spaceBetween={30}
                   centeredSlides={true}
@@ -74,7 +72,7 @@ const Projects = () => {
                   }}
                   navigation={true}
                   modules={[Autoplay, Pagination, Navigation]}
-                  className="mySwiper h-[260px] w-full"
+                  className="mySwiper md:h-[260px] w-full"
                 >
                   {project.images.map((img) => (
                     <SwiperSlide>
