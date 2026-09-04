@@ -1,129 +1,289 @@
 import React from "react";
-import { FaDesktop, FaEnvelope, FaHome, FaUserAlt } from "react-icons/fa";
+import {
+  FaHome,
+  FaUserAlt,
+  FaFlask,
+  FaCode,
+  FaGraduationCap,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedinIn,
+  FaFileAlt,
+} from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import "./Navbar.css";
-const Navbar = () => {
-  //     transition: "color 2s, background 1s",
-  const linkClasses =
-    "flex items-center  justify-center p-2 gap-3 text-base font-normal rounded-l hover:text-black hover:bg-white";
-  const activeLinkClasses = "bg-white text-black ";
-  return (
-    <div>
-      <aside
-        // id="default-sidebar"
-        class="fixed top-0 left-0 z-40 w-64 h-screen 
-       transition-transform -translate-x-1/2 sm:translate-x-0
-        "
-        // aria-label="Sidebar"
-      >
-        <div class="h-full  px-3 py-4  nav overflow-y-auto bg-gray-50 dark:bg-gray-800">
-          <ul class="space-y-2 flex flex-col mr-4 items-end  md:items-center md:justify-center mt-20  ">
-            <li className="pb-16 p-4 md:p-4 ">
-              <NavLink
-                to={"/"}
-                className={({ isActive }) =>
-                  `${isActive ? activeLinkClasses : ""} ${linkClasses}`
-                }
-              >
-                <div className="text-4xl md:text-lg ">
-                  <FaHome></FaHome>
-                </div>
-                <em className="hidden md:block">Home</em>
-              </NavLink>
-            </li>
-            <li className="pb-16 p-4 md:p-4">
-              <NavLink
-                to={"/about"}
-                className={({ isActive }) =>
-                  `${isActive ? activeLinkClasses : ""} ${linkClasses}`
-                }
-              >
-                <div className="text-4xl md:text-lg">
-                  <FaUserAlt></FaUserAlt>
-                </div>
-                <em className="hidden md:block">About</em>
-              </NavLink>
-            </li>
-            <li className="pb-16 p-4 md:p-4">
-              <NavLink
-                to={"/projects"}
-                className={({ isActive }) =>
-                  `${isActive ? activeLinkClasses : ""} ${linkClasses}`
-                }
-              >
-                <div className="text-4xl md:text-lg">
-                  <FaDesktop></FaDesktop>
-                </div>
-                <em className="hidden md:block">Projects</em>
-              </NavLink>
-            </li>
-            <li className="pb-16 p-4 md:p-4">
-              <NavLink
-                to={"/contact"}
-                className={({ isActive }) =>
-                  `${isActive ? activeLinkClasses : ""} ${linkClasses}`
-                }
-              >
-                <div className="text-4xl md:text-lg">
-                  <FaEnvelope></FaEnvelope>
-                </div>
-                <em className="hidden md:block">contact</em>
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      </aside>
 
-      {/* <div class="p-4 sm:ml-64">
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-          <div class="grid grid-cols-3 gap-4 mb-4">
-            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-            </div>
-            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-            </div>
-            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-            </div>
+const Navbar = () => {
+  const navItems = [
+    {
+      name: "Home",
+      path: "/",
+      icon: <FaHome />,
+    },
+    {
+      name: "About",
+      path: "/about",
+      icon: <FaUserAlt />,
+    },
+    {
+      name: "Research",
+      path: "/research",
+      icon: <FaFlask />,
+    },
+    {
+      name: "Projects",
+      path: "/projects",
+      icon: <FaCode />,
+    },
+    {
+      name: "Experience",
+      path: "/experience",
+      icon: <FaGraduationCap />,
+    },
+    {
+      name: "Contact",
+      path: "/contact",
+      icon: <FaEnvelope />,
+    },
+  ];
+
+  return (
+    <aside
+      className="
+        fixed top-0 left-0 z-50
+        h-screen w-[270px]
+        border-r border-white/10
+        text-white
+        backdrop-blur-md
+      "
+    >
+      <div className="flex h-full flex-col px-5 py-7">
+
+        {/* ================= LOGO / PROFILE ================= */}
+        <div className="mb-12 flex items-center gap-3 px-2">
+
+          <div
+            className="
+              flex h-11 w-11 shrink-0
+              items-center justify-center
+              rounded-xl
+              bg-gradient-to-br from-violet-600 to-indigo-600
+              text-sm font-bold
+              tracking-wider
+              shadow-lg shadow-violet-900/30
+            "
+          >
+            MI
           </div>
-          <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+
+          <div>
+            <h2 className="text-[15px] font-semibold tracking-wide">
+              Mayeda Islam
+            </h2>
+
+            <p className="mt-1 text-[10px] font-medium tracking-wide text-slate-300">
+              Researcher & Developer
+            </p>
           </div>
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-            </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-            </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-            </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-            </div>
-          </div>
-          <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-          </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-            </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-            </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-            </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-            </div>
-          </div>
+
         </div>
-      </div> */}
-    </div>
+
+        {/* ================= NAVIGATION ================= */}
+        <nav className="flex-1">
+
+          <p
+            className="
+              mb-4 px-3
+              text-[10px]
+              font-bold
+              tracking-[0.2em]
+              text-slate-300
+            "
+          >
+            MENU
+          </p>
+
+          <ul className="space-y-2">
+
+            {navItems.map((item) => (
+              <li key={item.name}>
+
+                <NavLink
+                  to={item.path}
+                  end={item.path === "/"}
+                  className={({ isActive }) =>
+                    `
+                    group relative
+                    flex items-center gap-4
+                    rounded-xl
+                    px-4 py-3
+                    transition-all duration-300
+
+                    ${
+                      isActive
+                        ? "bg-violet-500/20 text-white"
+                        : "text-slate-300 hover:bg-white/10 hover:text-white"
+                    }
+                    `
+                  }
+                >
+                  {({ isActive }) => (
+                    <>
+                      {/* Active Indicator */}
+                      {isActive && (
+                        <span
+                          className="
+                            absolute
+                            -left-5
+                            top-1/2
+                            h-7
+                            w-[3px]
+                            -translate-y-1/2
+                            rounded-r-full
+                            bg-violet-500
+                          "
+                        />
+                      )}
+
+                      {/* Icon */}
+                      <span
+                        className={`
+                          flex w-5
+                          items-center justify-center
+                          text-[15px]
+                          transition-transform duration-300
+                          group-hover:scale-110
+
+                          ${
+                            isActive
+                              ? "text-violet-400"
+                              : "text-slate-300 group-hover:text-violet-400"
+                          }
+                        `}
+                      >
+                        {item.icon}
+                      </span>
+
+                      {/* Text */}
+                      <span
+                        className="
+                          text-[13px]
+                          font-medium
+                          tracking-wide
+                        "
+                      >
+                        {item.name}
+                      </span>
+                    </>
+                  )}
+                </NavLink>
+
+              </li>
+            ))}
+
+          </ul>
+
+        </nav>
+
+        {/* ================= BOTTOM SECTION ================= */}
+        <div className="border-t border-white/10 pt-5">
+
+          {/* CV BUTTON */}
+          <a
+            href="/Mayeda_Islam_CV.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="
+              flex w-full
+              items-center justify-center
+              gap-2
+              rounded-xl
+              border border-white/10
+              bg-white/10
+              px-4 py-3
+              text-xs
+              font-semibold
+              text-slate-200
+
+              transition-all duration-300
+
+              hover:border-violet-500/40
+              hover:bg-violet-600
+              hover:text-white
+              hover:shadow-lg
+              hover:shadow-violet-900/30
+            "
+          >
+            <FaFileAlt className="text-[13px]" />
+
+            <span>View CV</span>
+          </a>
+
+          {/* SOCIAL LINKS */}
+          <div className="mt-5 flex justify-center gap-3">
+
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="
+                flex h-9 w-9
+                items-center justify-center
+                rounded-lg
+                bg-white/10
+                text-slate-300
+
+                transition-all duration-300
+
+                hover:-translate-y-1
+                hover:bg-violet-600
+                hover:text-white
+              "
+            >
+              <FaGithub />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="
+                flex h-9 w-9
+                items-center justify-center
+                rounded-lg
+                bg-white/10
+                text-slate-300
+
+                transition-all duration-300
+
+                hover:-translate-y-1
+                hover:bg-violet-600
+                hover:text-white
+              "
+            >
+              <FaLinkedinIn />
+            </a>
+
+          </div>
+
+          {/* COPYRIGHT */}
+          <p
+            className="
+              mt-5
+              text-center
+              text-[9px]
+              tracking-wide
+              text-slate-300
+            "
+          >
+            © {new Date().getFullYear()} Mayeda Islam
+          </p>
+
+        </div>
+
+      </div>
+    </aside>
   );
 };
 
