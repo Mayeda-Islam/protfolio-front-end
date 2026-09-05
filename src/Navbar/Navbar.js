@@ -26,7 +26,7 @@ const Navbar = () => {
     },
     {
       name: "Research",
-      path: "/research",
+      path: "/researchs",
       icon: <FaFlask />,
     },
     {
@@ -36,7 +36,7 @@ const Navbar = () => {
     },
     {
       name: "Experience",
-      path: "/experience",
+    path: "/experience",
       icon: <FaGraduationCap />,
     },
     {
