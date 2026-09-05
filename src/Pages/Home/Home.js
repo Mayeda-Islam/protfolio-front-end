@@ -16,8 +16,7 @@ const Home = () => {
   ];
 
   return (
-    // Home.jsx
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-hidden">
       {/* =====================================================
           BACKGROUND
       ====================================================== */}
@@ -297,6 +296,8 @@ const Home = () => {
                     Explore Research
                   </Link>
                 </div>
+
+              
               </div>
             </div>
           </div>
