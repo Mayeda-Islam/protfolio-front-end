@@ -20,7 +20,7 @@ const Research = () => {
         <div className="mx-auto max-w-6xl">
 
           {/* ================= HEADER ================= */}
-          <div className="mb-14 max-w-3xl">
+          <div className="mb-14 max-w-3xl mx-auto">
             <p className="text-xs font-medium uppercase tracking-[0.35em] text-violet-400">
               Research
             </p>

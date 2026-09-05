@@ -13,11 +13,14 @@ const Main = () => {
   const backgroundImages = {
     "/": homeImage,
     "/about": aboutImage,
+    "/research": homeImage,
     "/projects": projectsImage,
+    "/experience": aboutImage,
     "/contact": contactImage,
   };
 
-  const currentImage = backgroundImages[location.pathname] || homeImage;
+  const currentImage =
+    backgroundImages[location.pathname] || homeImage;
 
   const [background, setBackground] = useState(currentImage);
   const [previousBackground, setPreviousBackground] = useState(null);
@@ -26,9 +29,7 @@ const Main = () => {
   useEffect(() => {
     if (currentImage === background) return;
 
-    // New image আগে preload করা
     const img = new Image();
-
     img.src = currentImage;
 
     img.onload = () => {
@@ -36,7 +37,6 @@ const Main = () => {
       setBackground(currentImage);
       setIsChanging(true);
 
-      // Transition শেষ হওয়ার পর old image remove
       setTimeout(() => {
         setPreviousBackground(null);
         setIsChanging(false);
@@ -80,7 +80,7 @@ const Main = () => {
         />
       )}
 
-      {/* New Background */}
+      {/* Current Background */}
       <div
         className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700"
         style={{
@@ -96,11 +96,11 @@ const Main = () => {
       <Navbar />
 
       {/* ================= PAGE CONTENT ================= */}
-      <main className="relative z-10 ml-[270px] min-h-screen overflow-x-hidden">
+      <main className="relative z-10 ml-0 min-h-screen overflow-x-hidden lg:ml-[270px]">
 
         <div
           key={location.pathname}
-          className="page-slide-in min-h-screen"
+          className="page-slide-in min-h-screen pt-[70px] lg:pt-0"
         >
           <Outlet />
         </div>
